@@ -30,10 +30,17 @@ def register():
 
         # Check if emailid already registered
         cursor.execute("SELECT emailid FROM users WHERE emailid = %s", (emailid,))
-        existing_user = cursor.fetchone()
+        existing_email = cursor.fetchone()
 
-        if existing_user:
-            return jsonify({'message': 'Already Registered'}), 409  # Conflict
+        if existing_email:
+            return jsonify({'message': 'Email already registered'}), 409
+
+        # Check if userid already taken
+        cursor.execute("SELECT userid FROM users WHERE userid = %s", (userid,))
+        existing_userid = cursor.fetchone()
+
+        if existing_userid:
+            return jsonify({'message': 'User ID already taken'}), 409
 
         # Insert new user
         cursor.execute(

@@ -11,7 +11,7 @@ db_config = {
     'password': 'Mukul2004@',
     'database': 'car_rent_servics'
 }
-
+role = None
 @login_bp.route('/login', methods=['POST'])
 def login():
     data = request.get_json()
@@ -26,7 +26,7 @@ def login():
         cursor = conn.cursor(dictionary=True)
         print(conn.is_connected())
         # Check if user exists
-        cursor.execute('SELECT userid, emailid,password FROM users WHERE emailid=%s AND password=%s', (email, password))
+        cursor.execute('SELECT userid, emailid,password , role FROM users WHERE emailid=%s AND password=%s', (email, password))
         
         user = cursor.fetchone()
         print(user)
@@ -35,6 +35,7 @@ def login():
             # Create session
             print(user['userid'])
             session['userid'] = user['userid']
+            role = user['role']
            
             # Insert login history
             login_time = datetime.now()
@@ -47,6 +48,7 @@ def login():
             return jsonify({
                 'message': 'Login successful',
                 'session_user_id': session['userid'],
+                'role': user['role']
                
             }), 200
         else:
