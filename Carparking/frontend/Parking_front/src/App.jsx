@@ -8,6 +8,7 @@ import { SessionProvider } from "./Components/Pages/Control_panel_of_api/Session
 import Logout from "./Components/Pages/Logout/Logout.jsx";
 import Sidebar from "./Components/mini components/Sidebar.jsx";
 import Admin_panel from "./Components/Pages/Admin_panel/Admin_pannel.jsx";
+import Profile from "./Components/Pages/profie/Profile.jsx"; // Corrected import path
 function App() {
   return (
     <>
@@ -23,6 +24,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/logout" element={<Logout />} />
         <Route path="/admin" element={<Admin_panel/>} />
+        <Route path="/Profile" element={<Profile />} />
       </Routes>
       </SessionProvider>
     </>

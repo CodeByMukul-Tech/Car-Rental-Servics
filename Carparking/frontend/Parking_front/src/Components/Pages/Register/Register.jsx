@@ -27,7 +27,7 @@ export default function Register() {
   
       if (response.ok) {
         alert(result.message); 
-        navigate('/') // Registration Successful
+        navigate('/login') // Registration Successful
         // document.body.style.backgroundColor = "green";
 
       } else {

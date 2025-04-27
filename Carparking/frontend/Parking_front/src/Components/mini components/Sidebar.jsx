@@ -9,10 +9,8 @@ const Sidebar = () => {
       <h2 className="logo">FancyCarRental</h2>
       <nav className="nav-links">
         <Link to="/" className="nav-item">Home</Link>
-        <Link to="/cars" className="nav-item">Cars</Link>
-        <Link to="/about" className="nav-item">About Us</Link>
-        <Link to="/contact" className="nav-item">Contact</Link>
-        <Link to="/book" className="nav-item">Book Now</Link>
+        <Link to="/Profile" className='nav-item'>Profile</Link>
+        
       </nav>
     </div>
   );
