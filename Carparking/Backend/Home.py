@@ -22,7 +22,7 @@ def get_user_info(userid):
         cursor = conn.cursor(dictionary=True)
         
         # Fetch userid + image both
-        cursor.execute('SELECT userid, image FROM customer_information WHERE userid = %s', (userid,))
+        cursor.execute('SELECT userid, image FROM customer_information WHERE userid = %s', (userid))
         user = cursor.fetchone()
         print(user)
 

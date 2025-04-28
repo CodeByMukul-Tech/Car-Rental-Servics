@@ -1,0 +1,36 @@
+
+
+.car-location-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .car-location-card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 20%;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: 0.3s;
+    border: 1px solid black;
+    margin-left: 2rem;
+    box-shadow: 0px 0px 10px black;
+  }
+  
+  .location-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+  }
+  
+  .location-card h2 {
+    margin-bottom: 10px;
+  }
+  
+  .location-card p {
+    margin: 5px 0;
+  }
+  

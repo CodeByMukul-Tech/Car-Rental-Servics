@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Home.css';
 import axios from 'axios';
+import Location  from '../Location/Location'; // Importing Location component
 
 function Home() {
   const [userData, setUserData] = useState({});
@@ -40,7 +41,7 @@ function Home() {
             <p><strong>Login Date:</strong> {loginDate}</p>
           </div>
         </div>
-        <h1>heading 2</h1>
+        <h1><Location/></h1>
       </div>
     </div>
   );

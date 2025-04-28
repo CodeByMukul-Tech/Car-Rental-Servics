@@ -21,7 +21,14 @@ function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        <Link className="navbar-logo">.</Link>
+        <Link to="/" className="navbar-link">Home</Link>
+                <Link to="/Profile" className='navbar-link'>Profile</Link>
+                <Link to="/Display" className="navbar-link">Car for Rent</Link>
+                <Link to="/Feedback" className='navbar-link'>Feedback</Link>
+                <Link to="/BookingHistory" className="navbar-link">Booking history</Link>
+                <Link to="/Booking" className='navbar-link'>Booking</Link>
+                <Link to="/Userinfo" className='navbar-link'>User_information</Link>
+                <Link to="/Payment" className='navbar-link'>Payment</Link>
         <ul className="navbar-links">
           {authStatus === 'loading' ? (
             <li className="navbar-item">Loading...</li> // You can show a loading indicator or spinner

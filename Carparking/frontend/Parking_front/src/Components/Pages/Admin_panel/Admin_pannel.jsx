@@ -1,11 +1,12 @@
 import React from "react";
 import './Admin.css'; // Import your CSS file for styling
-
+import { Link } from "react-router-dom";
+import Create_car from "./Create_car"; // Import the Create_car component
 function Admin_panel() {
   return (
     <div>
-      <h1>Admin Panel</h1>
-      <p>Welcome to the admin panel!</p>
+      <Create_car/>
+    
     </div>
   );
 }
