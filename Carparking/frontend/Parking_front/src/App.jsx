@@ -4,7 +4,7 @@ import Register from "./Components/Pages/Register/Register.jsx"; // (you had typ
 import Login from "./Components/Pages/Login/Login.jsx";
 import Home from "./Components/Pages/home/Home.jsx";
 import Navbar from "./Components/mini components/Navbar.jsx"
-import PaymentPage from "./Components/Pages/Payment/Payment.jsx"; // Corrected import path
+// import PaymentPage from "./Components/Pages/Payment/Payment.jsx"; // Corrected import path
 import Logout from "./Components/Pages/Logout/Logout.jsx";
 import Sidebar from "./Components/mini components/Sidebar.jsx";
 import Admin_panel from "./Components/Pages/Admin_panel/Admin_pannel.jsx";
@@ -23,7 +23,7 @@ function App() {
 
 
       <Navbar />
-      {/* <Sidebar /> */}
+      <Sidebar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
@@ -37,7 +37,7 @@ function App() {
         <Route path="/BookingHistory" element={<BookingHistory />} />
         <Route path="/Booking/:carid/:price" element={<Booking />} />
         <Route path="/Userinfo" element={<User_information/>}/>
-        <Route path="/payment/:carId/:bookingId/:price" element={<PaymentPage />} />
+        {/* <Route path="/payment/:carId/:bookingId/:price" element={<PaymentPage />} /> */}
 
       </Routes>
 
